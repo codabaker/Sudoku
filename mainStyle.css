@@ -1,0 +1,126 @@
+html {
+    background-color:tan;
+}
+
+h1 {
+    text-align:center;
+}
+
+#survey {
+    text-align:center;
+}
+
+.wrapper {
+    margin:auto;
+    background-color:white;
+    width:600px;
+    padding: 20px 0;
+}
+
+.gameBoard {
+ margin-left:28px;
+}
+
+.gameBoard td {
+    padding:0;
+    margin:0;
+    width:50px;
+    height:50px;
+    border:2px solid black;
+    text-align:center;
+    font-size:24px;
+}
+
+#comments {
+    width:100%;
+    text-align:left;
+    font-size:12px;
+    padding:2px;
+}
+
+input:not(:checked) ~.image {
+    display:none;
+}
+
+input:in-range {
+    padding:0;
+    margin:0;
+    width:50px;
+    height:50px;
+    text-align:center;
+    font-size:24px;
+}
+
+input:out-of-range {
+    border: 2px solid red;
+    background-color:lightgoldenrodyellow;
+    height:50px;
+    width:50px;
+    text-align:center;
+    font-size:24px;
+    -webkit-appearance: none;
+}
+
+input:required:valid + .errTone,  textarea:required:valid + .errTone,  select:required:valid + .errTone {
+    display:none;
+}
+
+input:required:invalid {
+    background-color:lightgoldenrodyellow;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.form-row {
+    margin-left:25px;
+    padding:5px;
+    width:450px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button[type="reset"] {
+    background-color: #e7e7e7; /* Gray */
+    color: black;
+    border: 2px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+form:valid ~.form-row {
+    display:none;
+}
+
+#comments:not(:empty) ~.errTone {
+    display:none;
+}
+
+#comments:invalid +.errTone {
+    color:red;
+}
+
+select:invalid + .errTone {
+    display:block;
+    color:red;
+}
+
+[name|="difficulty"]:checked + label {
+    font-size:24px;
+}

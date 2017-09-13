@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en">
+    <title>HTML/CSS Homework 8/30/2017</title>
+    <link rel="stylesheet" type="text/css" href="mainStyle.css">
+    <style>
+        /* prevent Chrome from turning fields yellow with autofill */
+        input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+            background-color: #fff !important; -webkit-box-shadow: 0 0 0px 30px white inset;
+        }
+    </style>
+    <script>
+        completePuzzle = function() {
+            document.getElementById("one").innerHTML = "TEST";
+        }
+    </script>
+<body>
+<!-- Put your HTML markup here -->
+<div class="wrapper">
+    <h1>Sudoku</h1>
+
+    <form class="my-form" novalidate>
+        <!-- The "novalidate" attribute tells the browser to not display its own error messages for invalid fields on this form -->
+
+        <div class="form-row">
+            <fieldset>
+                <legend>Difficulty</legend>
+                <input type="radio" name="difficulty" value="Easy" id="easy" checked />
+                <label id="id1" for="easy">Easy</label>
+                <input type="radio" name="difficulty" value="Normal" id="normal"/>
+                <label id="id2" for="normal">Normal</label>
+                <input type="radio" name="difficulty" value="Hard" id="hard"/>
+                <label id="id3" for="hard">Hard</label>
+            </fieldset>
+        </div>
+
+        <table class="gameBoard">
+            <tr><td><input type="number" min="1" max="1" name="1"required></td>
+                <td>7</td>
+                <td>5</td>
+                <td><input type="number" min="2" max="2" name="2"required></td>
+                <td>9</td>
+                <td><input type="number" min="4" max="4" name="3"required></td>
+                <td><input type="number" min="8" max="8" name="4"required></td>
+                <td><input type="number" min="3" max="3" name="5"required></td>
+                <td>6</td>
+            </tr>
+            <tr><td><input type="number" min="6" max="6" name="6"required></td>
+                <td>2</td>
+                <td>3</td>
+                <td><input type="number" min="1" max="1" name="7"required></td>
+                <td>8</td>
+                <td><input type="number" min="7" max="7" name="8"required></td>
+                <td><input type="number" min="9" max="9" name="9"required></td>
+                <td>4</td>
+                <td><input type="number" min="5" max="5" name="10"required></td>
+            </tr>
+            <tr><td>8</td>
+                <td><input type="number" min="9" max="9" name="11"required></td>
+                <td><input type="number" min="4" max="4" name="12"required></td>
+                <td><input type="number" min="5" max="5" name="13"required></td>
+                <td><input type="number" min="6" max="6" name="14"required></td>
+                <td>3</td>
+                <td><input type="number" min="2" max="2" name="15"required></td>
+                <td><input type="number" min="7" max="7" name="16"required></td>
+                <td>1</td>
+            </tr>
+            <tr><td>5</td>
+                <td><input type="number" min="1" max="1" name="17"required></td>
+                <td><input type="number" min="9" max="9" name="18"required></td>
+                <td>7</td>
+                <td><input type="number" min="3" max="3" name="19"required></td>
+                <td>2</td>
+                <td><input type="number" min="4" max="4" name="20"required></td>
+                <td><input type="number" min="6" max="6" name="21"required></td>
+                <td><input type="number" min="8" max="8" name="22"required></td>
+            </tr>
+            <tr><td><input type="number" min="3" max="3" name="23"required></td>
+                <td>4</td>
+                <td><input type="number" min="7" max="7" name="24"required></td>
+                <td>8</td>
+                <td><input type="number" min="5" max="5" name="25"required></td>
+                <td>6</td>
+                <td><input type="number" min="1" max="1" name="26"required></td>
+                <td>2</td>
+                <td><input type="number" min="9" max="9" name="27"required></td>
+            </tr>
+            <tr><td><input type="number" min="2" max="2" name="28"required></td>
+                <td><input type="number" min="8" max="8" name="29"required></td>
+                <td><input type="number" min="6" max="6" name="30"required></td>
+                <td>9</td>
+                <td><input type="number" min="4" max="4" name="31"required></td>
+                <td>1</td>
+                <td><input type="number" min="7" max="7" name="32"required></td>
+                <td><input type="number" min="5" max="5" name="33"required></td>
+                <td>3</td>
+            </tr>
+            <tr><td>9</td>
+                <td><input type="number" min="3" max="3" name="34"required></td>
+                <td><input type="number" min="8" max="8" name="35"required></td>
+                <td>4</td>
+                <td><input type="number" min="2" max="2" name="36"required></td>
+                <td><input type="number" min="5" max="5" name="37"required></td>
+                <td><input type="number" min="6" max="6" name="38"required></td>
+                <td><input type="number" min="1" max="1" name="39"required></td>
+                <td>7</td>
+            </tr>
+            <tr><td><input type="number" min="4" max="4" name="40"required></td>
+                <td>6</td>
+                <td><input type="number" min="1" max="1" name="41"required></td>
+                <td><input type="number" min="3" max="3" name="42"required></td>
+                <td>7</td>
+                <td><input type="number" min="9" max="9" name="43"required></td>
+                <td>5</td>
+                <td>8</td>
+                <td><input type="number" min="2" max="2" name="44"required></td>
+            </tr>
+            <tr><td>7</td>
+                <td><input type="number" min="5" max="5" name="45"required></td>
+                <td><input type="number" min="2" max="2" name="46"required></td>
+                <td><input type="number" min="6" max="6" name="47"required></td>
+                <td>1</td>
+                <td><input type="number" min="8" max="8" name="48"required></td>
+                <td>3</td>
+                <td>9</td>
+                <td><input type="number" min="4" max="4" name="49"required></td>
+            </tr>
+        </table>
+
+        <div id="survey">
+        <div class="form-row">
+            <input type="checkbox" id="spam-ok" name="spam-ok" ng-click="completePuzzle()"/>
+            <label>See Completed Puzzle</label>
+            <img class="image" src="sudoku.jpg" alt="completed puzzle" style="width:540px; height:540px;">
+        </div>
+
+        <div class="form-row">
+            <label for="spam">What would you rate this game?</label>
+            <select id="spam" name="spam" required>
+                <option value="" selected disabled>-- Select One --</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+            <div class="errTone">Please select a rating</div>
+        </div>
+
+        <div class="form-row">
+            <label for="comments">Please leave a review:</label>
+            <input id="comments" name="comments" placeholder="This game is awesome! 5 stars!" required>
+            <div class="errTone">Please enter a valid message</div>
+        </div>
+        </div>
+        <div class="form-row" style="text-align:center;">
+            <button type="reset">Cancel</button>
+            <button type="submit">Submit</button>
+            <span class="required-note">
+                <div><span class="required">*</span> Indicates a required field</div></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>
